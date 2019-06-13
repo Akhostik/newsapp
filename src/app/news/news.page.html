@@ -1,0 +1,19 @@
+<ion-header>
+    
+  <ion-toolbar color="primary">
+      <ion-icon name="home"></ion-icon>  
+    <ion-title>NewsGo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  Daily News
+<ion-card *ngFor="let article of data ?.articles" (click)="goSingle(article)">
+  <!-- <ion-img [src]="article.urlToImage"></ion-img> -->
+<ion-card-content>
+  <ion-card-title>{{article.title}}</ion-card-title>
+<p>{{article.description}}</p>
+</ion-card-content>
+</ion-card>
+
+</ion-content>
